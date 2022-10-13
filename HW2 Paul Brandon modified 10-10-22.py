@@ -80,9 +80,3 @@ driver.implicitly_wait(1.5)
 assert driver.find_element(By.ID, "ap_email").is_displayed(), "email field not shown"
 
 driver.quit()
-
-
-
-
-
-

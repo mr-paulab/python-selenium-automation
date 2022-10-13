@@ -1,14 +1,14 @@
-from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+# Created by mrpau at 10/10/2022
+Feature: # Test for amazon search
 
-# init driver
-driver = webdriver.Chrome()
-driver.maximize_window()
+  Scenario: # User can search for a product
+    # Enter steps here
+    Given Open amazon page
+    When Search for milk oolong tea
+    Then Search results for "milk oolong tea" are shown
 
-# open the url
-driver.get('https://www.amazon.com/')
-
-search = driver.find_element(By.NAME, 'q')
-search.clear()
-search.send_keys('Dress')
+  Scenario: # User can search for a product2
+    # Enter steps here
+    Given Open amazon page
+    When Search for mug
+    Then Search results for "mug" are shown
