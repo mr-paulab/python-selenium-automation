@@ -5,6 +5,5 @@ Feature: Color Selection Tests for Product Page
   Scenario: User can select colors
     # Enter steps here
     Given Open Amazon product B015ZN3WMO page
-#    When product page displays
-#    When product page B015ZN3WMO displays
+    When product page B015ZN3WMO displays
     Then Verify can click through colors
