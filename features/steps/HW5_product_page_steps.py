@@ -9,27 +9,14 @@ COLOR_OPTIONS = (By.CSS_SELECTOR, "#variation_color_name li")
 CURRENT_COLOR = (By.CSS_SELECTOR, "#variation_color_name .selection")
 
 
-@given('Open Amazon product product_id page')
-def open_amazon_product(context, product_id):
-    context.driver.get(f'https://www.amazon.com/dp/{product_id}/')
+#@given('Open Amazon product {product_id} page')
+#def open_amazon_product(context, product_id):
+#    context.driver.get(f'https://www.amazon.com/dp/{product_id}/')
 
 
-#@when('product page displays')
-#@when('product page product_id displays')
-#def verify_product_page(context):
-#    context.driver.wait.until(EC.url_contains({product_id}), message='web page did not load in time')
-#def verify_product_page(context):
-#    context.driver.wait.until(EC.url_contains('{product_id}'), message='web page did not load in time')
-#def verify_product_page(context):
-#    context.driver.wait.until(EC.url_contains(product_id), message='web page did not load in time')
-#    print("page for product loaded")
-#def verify_product_page(context, product_id):
-#    context.driver.wait.until(EC.url_contains({product_id}), message='web page did not load in time')
-#def verify_product_page(context, product_id):
-#    context.driver.wait.until(EC.url_contains('{product_id}'), message='web page did not load in time')
-#def verify_product_page(context, product_id):
-#    context.driver.wait.until(EC.url_contains(product_id), message='web page did not load in time')
-#    print("page for product loaded")
+@when('product page {product_id} displays')
+def verify_product_page(context, product_id):
+    context.driver.wait.until(EC.url_contains(product_id), message='web page did not load in time')
 
 
 @then('Verify can click through colors')
