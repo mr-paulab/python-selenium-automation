@@ -1,5 +1,5 @@
 # Created by mrpau at 10/10/2022
-Feature: # Test for amazon search
+Feature: Test for amazon search
 
   Scenario: # User can search for a product
     # Enter steps here

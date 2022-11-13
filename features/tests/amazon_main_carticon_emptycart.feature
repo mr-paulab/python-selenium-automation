@@ -6,4 +6,4 @@ Feature: Test for empty shopping cart
     # Enter steps here
     Given Open amazon home page
     When Click on Cart
-    Then Verify Cart page opens cart empty
+    Then Verify Cart empty

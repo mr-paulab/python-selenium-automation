@@ -1,6 +1,13 @@
 # Created by mrpau at 11/1/2022
-Feature: # Enter feature name here
+Feature: # Tests for Amazon main page
   # Enter feature description here
 
-  Scenario: # Enter scenario name here
+  Scenario: Hamburger menu is present
     # Enter steps here
+    Given open amazon page
+    Then Verify hamburger menu is present
+
+  Scenario: Footer has correct amount of links
+    # Enter Steps here
+    Given open amazon page
+    Then Verify that footer has 38 links
