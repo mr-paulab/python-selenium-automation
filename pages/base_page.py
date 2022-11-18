@@ -9,31 +9,25 @@ class Page:
         self.wait = WebDriverWait(self.driver, 15)
         self.base_url = 'https://www.amazon.com'
 
-
     def open_url(self, end_url=''):
         url = f'{self.base_url}{end_url}'
         print(f'Opening URL: {url}')
         self.driver.get(url)
 
-
     def find_element(self, *locator):
-            return self.driver.find_element(*locator)
+        return self.driver.find_element(*locator)
 
-
-    def find_elements(selfself, *locator):
+    def find_elements(self, *locator):
         return self.driver.find_elements(*locator)
-
 
     def click(self, *locator):
         self.driver.find_element(*locator).click()
-
 
     def input_text(self, text, *locator):
         e = self.driver.find_element(*locator)
         e.clear()
         e.send_keys(text)
         print(f'Inputting text: {text}')
-
 
     def wait_for_element_click(self, *locator):
         e = self.wait.until(EC.element_to_be_clickable(locator))

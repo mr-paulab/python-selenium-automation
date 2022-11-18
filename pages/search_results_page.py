@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 from pages.base_page import Page
 
+
 class SearchResultsPage(Page):
     SEARCH_RESULTS = (By.CSS_SELECTOR, '.a-color-state.a-text-bold')
 

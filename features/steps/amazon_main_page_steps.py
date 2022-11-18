@@ -7,6 +7,7 @@ HAM_MENU = (By.ID, 'nav-hamburger-menu')
 FOOTER_LINKS = (By.CSS_SELECTOR, '.navFooterDescItem a')
 SIGN_IN = (By.CSS_SELECTOR, "#nav-signin-tooltip .nav-action-button")
 # SEARCH_INPUT = (By.id, 'twotabsearchtextbox')
+CART_ICON = (By.CSS_SELECTOR, "#a-row sc-your-amazon-cart-is-empty h2")
 
 
 @given('Open amazon page')
@@ -19,12 +20,17 @@ def click_returns_and_orders(context):
     context.app.main_page.search_order_btn()
 
 
+@when('Click on cart icon')
+def click_cart_icon(context):
+    context.app.main_page.click_on_cart()
+
+@then('Verify Your Amazon Cart is empty text')
+def verify_cart_empty_txt(context):
+    context.app.main_page.cart_empty_txt()
+
+
 @when('Search for {product}')
 def search_product(context, product):
-    # element = context.driver.find_element(By.ID, 'twotabsearchtextbox')
-    # element.clear()
-    # element.send_keys(product)
-    # context.driver.find_element(By.ID, 'nav-search-submit-button').click()
     context.app.main_page.search_product(product)
 
 
