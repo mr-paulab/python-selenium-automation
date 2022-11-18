@@ -1,19 +1,22 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
-# EC is a common alias for expected_conditions
 from time import sleep
 
 HAM_MENU = (By.ID, 'nav-hamburger-menu')
 FOOTER_LINKS = (By.CSS_SELECTOR, '.navFooterDescItem a')
 SIGN_IN = (By.CSS_SELECTOR, "#nav-signin-tooltip .nav-action-button")
-# SEARCH_INPUT = (bY.id, 'twotabsearchtextbox')
+# SEARCH_INPUT = (By.id, 'twotabsearchtextbox')
 
 
 @given('Open amazon page')
 def open_amazon(context):
     # context.driver.get('https://www.amazon.com/')
     context.app.main_page.open_main()
+
+@when('Click Returns and Orders')
+def click_returns_and_orders(context):
+    context.app.main_page.search_order_btn()
 
 
 @when('Search for {product}')

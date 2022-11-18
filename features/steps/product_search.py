@@ -37,6 +37,6 @@ def click_search_icon(context):
 def verify_found_results_text(context, search_word):
     context.driver.wait.until(EC.url_contains(search_word), message='URL does not contain search word in time')
     print("URL contains search_word")
-#assertion also tests that the search_word is in the URL
+# assertion also tests that the search_word is in the URL
     assert search_word.lower() in context.driver.current_url.lower(), f"Expected query not in {context.driver.current_url.lower()}"
     print("assert confirms search term in URL")
