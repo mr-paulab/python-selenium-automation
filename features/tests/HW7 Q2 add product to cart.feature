@@ -6,8 +6,8 @@ Feature: # Enter feature name here
 
   Scenario: Add to cart verify cart using POM
     Given Open amazon page
-    When Search for oolong tea
-    Then Search results for oolong tea are shown
+    When Search for organic oolong tea
+    Then Search results for organic oolong tea are shown
     And click to display one product page
     And click one-time purchase button
     Then click add to cart button
