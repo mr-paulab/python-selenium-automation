@@ -24,6 +24,7 @@ def click_returns_and_orders(context):
 def click_cart_icon(context):
     context.app.main_page.click_on_cart()
 
+
 @then('Verify Your Amazon Cart is empty text')
 def verify_cart_empty_txt(context):
     context.app.main_page.cart_empty_txt()
