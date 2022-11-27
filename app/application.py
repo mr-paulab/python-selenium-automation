@@ -1,7 +1,7 @@
 from pages.bestsellers_page import BestsellersPage
 from pages.main_page import MainPage
 from pages.search_results_page import SearchResultsPage
-from pages.sign_in_page import SignInPage
+from pages.signin_page import SignInPage
 from pages.cart_page import CartPage
 
 
